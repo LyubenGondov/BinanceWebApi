@@ -1,0 +1,20 @@
+﻿@model Symbols
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <form method="post" asp-action="Index" asp-controller="Home">
+        <div class="form-group">            
+            <select id="Symbols" asp-for="@Model.Symbol" class="form-control" required>
+                <option value="0">Choose Symbol</option>
+                <option value="1">BCT</option>
+                <option value="2">ETH</option>
+                <option value="3">ADA</option>
+            </select>
+            <div class="form-group">
+                <input type="submit" value="Start Saving in DB" class="btn btn-primary" />
+            </div>
+            <p>Exit the browser to stop filling our database</p>
+        </div>
+    </form>
+
